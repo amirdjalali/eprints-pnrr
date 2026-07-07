@@ -31,6 +31,4 @@ Questo progetto utilizza [uv](https://github.com/astral-sh/uv) per la gestione d
 
 ## Licenza
 
-Il file `data/progetti.csv` è rilasciato con licenza [ODbL 1.0](https://it.okfn.org/odbl-riassunto/)
-
 Il codice è rilasciato con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
