@@ -8,7 +8,7 @@ Il formato del file di output è modellato sull'esempio delle [API di OpenAIRE p
 
 ## Mappatura dei campi
 
-I le colonne del file `data/progetti.csv` sono stati mappati nel formato:
+Le colonne del file `data/progetti.csv` sono stati mappati nel formato:
 
 ```
 info:eu-repo/grantAgreement/Funder/FundingProgram/ProjectID/[Jurisdiction]/[ProjectName]/[ProjectAcronym]

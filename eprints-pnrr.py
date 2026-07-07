@@ -4,21 +4,17 @@ from pathlib import Path
 pnrr_df = pd.read_csv("data/progetti.csv")
 out_path = Path("out/progetti_pnrr_eprints.html")
 
-pnrr_list = []
-i = 0
-n_projects = len(pnrr_df)
-
 SMALL = {
-    "A","AD","AL","ALLO","ALLA","AGLI","ALLE",
-    "D", "DA","DAL","DALLO","DALLA","DAGLI","DALLE",
-    "DI","DEL","DELLO","DELLA","DEI","DEGLI","DELLE", "DELL'"
-    "IN","NEL","NELLO","NELLA","NEI","NEGLI","NELLE",
-    "SU","SUL","SULLO","SULLA","SUI","SUGLI","SULLE",
+    "A","AD","AL","ALLO","ALLA","AGLI","ALLE","ALL'"
+    "D", "DA","DAL","DALLO","DALLA","DAGLI","DALLE","DELL'",
+    "DI","DEL","DELLO","DELLA","DEI","DEGLI","DELLE","D'",
+    "IN","NEL","NELLO","NELLA","NEI","NEGLI","NELLE","NELL'",
+    "SU","SUL","SULLO","SULLA","SUI","SUGLI","SULLE","SULL'"
     "IL", "LA", "LO", "I", "GLI", "LE", "L'"
     "TRA","FRA",
     "CON","PER","PRO","CONTRO",
     "E","O","MA","NÉ","NE","ANCHE","PURE",
-    "CHE","CUI",
+    "CHE","CUI"
 }
 
 def italian_title_case(input_string: str) -> str:
@@ -30,6 +26,10 @@ def italian_title_case(input_string: str) -> str:
         else:
             out_tokens.append(token.lower())
     return " ".join(out_tokens)
+
+pnrr_list = []
+i = 0
+n_projects = len(pnrr_df)
 
 for idx, row in pnrr_df.iterrows():
     i += 1
